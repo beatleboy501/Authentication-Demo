@@ -40,7 +40,7 @@ export default class CreateForm extends Component {
 
     $.ajax({
           type: 'POST',
-          url: 'http://localhost:8080/api/create',
+          url: 'http://authenticate-demo.herokuapp.com/api/create',
           data: data
         })
         .done(function(data) {
