@@ -20073,11 +20073,11 @@ var AuthenticateForm = function (_Component) {
         data: data
       }).done(function (data) {
         alert(data.message + "\n" + data.token);
-        this.userNameChange('');
-        this.passwordChange('');
       }).fail(function (jqXhr) {
         alert('failed to register ' + jqXhr);
       });
+      this.userNameChange('');
+      this.passwordChange('');
     }
   }, {
     key: 'render',
@@ -20200,12 +20200,12 @@ var CreateForm = function (_Component) {
         url: 'http://localhost:8080/api/create',
         data: data
       }).done(function (data) {
-        alert('User ' + this.state.username + ' saved successfully');
-        this.userNameChange('');
-        this.passwordChange('');
+        alert('User saved successfully');
       }).fail(function (jqXhr) {
         alert('Failed to register');
       });
+      this.userNameChange('');
+      this.passwordChange('');
     }
   }, {
     key: 'render',

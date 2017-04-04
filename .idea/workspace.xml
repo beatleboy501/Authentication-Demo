@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2414eef5-bfac-4554-aff3-adebb385bb64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dockerfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/jsx/components/AuthenticateForm.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/jsx/components/Button.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/jsx/components/Input.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/jsx/components/MainPage.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/jsx/components/Password.jsx" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
     </list>
     <ignored path="node.js-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.042735044">
+            <state vertical-scroll-proportion="0.0">
               <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding />
             </state>
@@ -100,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.042735044">
+              <caret line="2" column="109" selection-start-line="2" selection-start-column="109" selection-end-line="2" selection-end-column="109" />
               <folding />
             </state>
           </provider>
@@ -168,6 +162,7 @@
         <option value="$PROJECT_DIR$/app/assets/jsx/components/AuthenticateForm.jsx" />
         <option value="$PROJECT_DIR$/app/assets/jsx/components/CreateForm.jsx" />
         <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/config.js" />
       </list>
     </option>
   </component>
@@ -835,12 +830,12 @@
       <option name="number" value="Default" />
       <updated>1491245598676</updated>
       <workItem from="1491245601700" duration="2578000" />
-      <workItem from="1491307160587" duration="5234000" />
+      <workItem from="1491307160587" duration="5709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7812000" />
+    <option name="totallyTimeSpent" value="8287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="873" extended-state="0" />
@@ -1062,14 +1057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/jsx/components/Password.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1080,8 +1067,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042735044">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.042735044">
+          <caret line="2" column="109" selection-start-line="2" selection-start-column="109" selection-end-line="2" selection-end-column="109" />
           <folding />
         </state>
       </provider>
