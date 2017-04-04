@@ -39,7 +39,7 @@ export default class AuthenticateForm extends Component {
 
     $.ajax({
           type: 'POST',
-          url: 'http://authenticate-demo.herokuapp.com/api/authenticate',
+          url: 'https://authenticate-demo.herokuapp.com/api/authenticate',
           data: data
         })
         .done(function(data) {
