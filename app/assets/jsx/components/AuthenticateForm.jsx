@@ -48,8 +48,10 @@ export default class AuthenticateForm extends Component {
         .fail(function(jqXhr) {
           alert('failed to register ' + jqXhr);
         });
-    this.userNameChange('');
-    this.passwordChange('');
+    this.setState({
+      username: '',
+      password: ''
+    });
   }
 
   render() {

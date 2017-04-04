@@ -49,8 +49,10 @@ export default class CreateForm extends Component {
         .fail(function(jqXhr) {
           alert('Failed to register');
         });
-    this.userNameChange('');
-    this.passwordChange('');
+    this.setState({
+      username: '',
+      password: ''
+    });
   }
 
   render() {
