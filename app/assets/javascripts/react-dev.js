@@ -19817,13 +19817,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var $ = __webpack_require__(58);
 
-var MainPage = function (_Component) {
-  _inherits(MainPage, _Component);
+var Main = function (_Component) {
+  _inherits(Main, _Component);
 
-  function MainPage(props) {
-    _classCallCheck(this, MainPage);
+  function Main(props) {
+    _classCallCheck(this, Main);
 
-    var _this = _possibleConstructorReturn(this, (MainPage.__proto__ || Object.getPrototypeOf(MainPage)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
 
     _this.validate = _this.validate.bind(_this);
     _this.state = {
@@ -19838,7 +19838,7 @@ var MainPage = function (_Component) {
   // TODO: add more validation or use lib
 
 
-  _createClass(MainPage, [{
+  _createClass(Main, [{
     key: 'validate',
     value: function validate(data) {
       if (!data.username || 0 === data.username.length) {
@@ -19867,7 +19867,7 @@ var MainPage = function (_Component) {
         alert('Validation Failure');
         return;
       }
-      var url = isCreate ? "http://localhost:8080/api/create" : "http://localhost:8080/api/authenticate";
+      var url = isCreate ? "https://authenticate-demo.herokuapp.com/api/create" : "https://authenticate-demo.herokuapp.com/api/authenticate";
       $.ajax({
         type: 'POST',
         url: url,
@@ -19975,7 +19975,28 @@ var MainPage = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              'Use the Create User to create a new User and use the Authenticate User tab to generate the Auth token'
+              'The Create User tab is used to create a new User.'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'The Authenticate User tab is used to generate the Auth token.'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'The Sentiment tab is used to retrieve a "sentiment" of good, bad, or neutral as well as a confidence score.'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'Server documentation can be found ',
+              _react2.default.createElement(
+                'a',
+                { href: 'https://authenticate-demo.herokuapp.com/module-Server.html' },
+                'here'
+              ),
+              '. '
             )
           ),
           _react2.default.createElement(
@@ -20019,10 +20040,10 @@ var MainPage = function (_Component) {
     }
   }]);
 
-  return MainPage;
+  return Main;
 }(_react.Component);
 
-exports.default = MainPage;
+exports.default = Main;
 
 /***/ }),
 /* 84 */
@@ -20039,13 +20060,13 @@ var _reactDom = __webpack_require__(20);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _MainPage = __webpack_require__(83);
+var _Main = __webpack_require__(83);
 
-var _MainPage2 = _interopRequireDefault(_MainPage);
+var _Main2 = _interopRequireDefault(_Main);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_MainPage2.default, null), document.getElementById('app'));
+_reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('app'));
 
 /***/ }),
 /* 85 */
@@ -20212,7 +20233,7 @@ var Sentiment = function (_Component) {
       };
       $.ajax({
         type: 'POST',
-        url: "http://localhost:8080/api/sentiment",
+        url: "https://authenticate-demo.herokuapp.com/api/sentiment",
         data: data
       }).done(function (data) {
         alert("Confidence: " + data.confidence + "\nSentiment: " + data.sentiment);
