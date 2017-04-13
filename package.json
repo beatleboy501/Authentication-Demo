@@ -27,6 +27,8 @@
     "express": "4.x",
     "history": "^4.6.1",
     "jquery": "^3.2.1",
+    "jsdoc": "^3.4.3",
+    "json-loader": "^0.5.4",
     "jsonwebtoken": "^7.3.0",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.3",
@@ -36,6 +38,7 @@
     "react-dom": "^15.4.2",
     "react-router": "^4.0.0",
     "react-stormpath": "^2.0.1",
+    "unirest": "^0.5.1",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
   },

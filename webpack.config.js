@@ -14,12 +14,11 @@ function buildConfig(env) {
     resolve: {
       extensions: ['.js', '.jsx']
     },
-    module : {
+    module: {
       loaders: [
         {
           test: /\.jsx?$/,
           loader: 'babel-loader',
-          exclude: /node_modules/,
           include: APP_DIR,
           query: {
             presets: ['es2015', 'react']
@@ -27,7 +26,7 @@ function buildConfig(env) {
         },
         {
           test: /\.json$/,
-          loader: 'json'
+          loader: 'json-loader'
         }
       ]
     }

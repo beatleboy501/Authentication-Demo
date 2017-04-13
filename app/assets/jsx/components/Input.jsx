@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+const propTypes = {
+  type: React.PropTypes.string
+};
+
 export default class Input extends Component {
   constructor(props) {
     super(props);
@@ -11,9 +15,11 @@ export default class Input extends Component {
         <div>
           <label>{this.props.label}</label>
           <br/>
-          <input type="text" onChange={this.props.valChange} value={ this.props.val}/>
+          <input type={this.props.type} onChange={this.props.valChange} value={this.props.val}/>
           <br/>
         </div>
     );
   }
 }
+
+Input.PropTypes = propTypes;
