@@ -106,8 +106,9 @@ export default class Main extends Component {
           <div className="tab-content">
             <div id="menu1" className="tab-pane fade in active">
               <h3>Home</h3>
-              <p>Use the Create User to create a new User and use the Authenticate User tab to generate the Auth
-                token</p>
+              <p>The Create User tab is used to create a new User. The Authenticate User tab is used to generate the Auth
+                token. The Sentiment tab is used to retrieve a "sentiment" of good, bad, or neutral as well as a confidence score.
+                App documentation can be found <a href="https://authenticate-demo.herokuapp.com/app-documentation">here</a>. </p>
             </div>
             <div id="menu2" className="tab-pane fade">
               <h3>Create User</h3>
