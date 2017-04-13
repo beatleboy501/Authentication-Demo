@@ -37,7 +37,7 @@ export default class Sentiment extends Component {
     };
     $.ajax({
           type: 'POST',
-          url: "http://localhost:8080/api/sentiment",
+          url: "https://authenticate-demo.herokuapp.com//api/sentiment",
           data: data
         })
         .done(function (data) {

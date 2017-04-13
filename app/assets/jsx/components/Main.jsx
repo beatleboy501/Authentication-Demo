@@ -5,7 +5,7 @@ import Sentiment from './Sentiment.jsx';
 
 const $ = require('jquery');
 
-export default class MainPage extends Component {
+export default class Main extends Component {
   constructor(props) {
     super(props);
     this.validate = this.validate.bind(this);
@@ -44,7 +44,7 @@ export default class MainPage extends Component {
       alert('Validation Failure');
       return;
     }
-    let url = isCreate ? "http://localhost:8080/api/create" : "http://localhost:8080/api/authenticate";
+    let url = isCreate ? "https://authenticate-demo.herokuapp.com//api/create" : "https://authenticate-demo.herokuapp.com//api/authenticate";
     $.ajax({
           type: 'POST',
           url: url,
