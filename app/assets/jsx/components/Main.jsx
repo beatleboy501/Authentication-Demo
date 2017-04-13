@@ -44,7 +44,7 @@ export default class Main extends Component {
       alert('Validation Failure');
       return;
     }
-    let url = isCreate ? "https://authenticate-demo.herokuapp.com//api/create" : "https://authenticate-demo.herokuapp.com//api/authenticate";
+    let url = isCreate ? "https://authenticate-demo.herokuapp.com/api/create" : "https://authenticate-demo.herokuapp.com/api/authenticate";
     $.ajax({
           type: 'POST',
           url: url,
