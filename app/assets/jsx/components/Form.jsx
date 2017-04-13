@@ -21,8 +21,8 @@ export default class Form extends Component {
           <div className="col-md-3"></div>
           <div className="col-md-3">
             <form onSubmit={this.props.onSubmit}>
-              <Input type="text" label="Username:" valChange={this.props.onInputChange} val={this.props.newUsername}/>
-              <Input type="password" label="Password:" valChange={this.props.onPasswordChange} val={this.props.newPassword}/>
+              <Input name="username" type="text" label="Username:" valChange={this.props.onInputChange} val={this.props.newUsername}/>
+              <Input name="password" type="password" label="Password:" valChange={this.props.onPasswordChange} val={this.props.newPassword}/>
               <br/>
               <button type="submit">Submit</button>
             </form>

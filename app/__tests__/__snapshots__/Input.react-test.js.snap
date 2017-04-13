@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input can change 1`] = `
+<div>
+  <label>
+    Username:
+  </label>
+  <br />
+  <input
+    onChange={[Function]}
+    type="text"
+    value="val"
+  />
+  <br />
+</div>
+`;
+
+exports[`Input renders 1`] = `
+<div>
+  <label />
+  <br />
+  <input
+    onChange={undefined}
+    type={undefined}
+    value={undefined}
+  />
+  <br />
+</div>
+`;
+
+exports[`Password can change 1`] = `
+<div>
+  <label>
+    Password:
+  </label>
+  <br />
+  <input
+    onChange={[Function]}
+    type="password"
+    value="val"
+  />
+  <br />
+</div>
+`;

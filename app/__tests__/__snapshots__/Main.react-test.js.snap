@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main renders 1`] = `
+<div
+  className="container"
+>
+  <ul
+    className="nav nav-tabs"
+  >
+    <li
+      className="active"
+    >
+      <a
+        data-toggle="tab"
+        href="#menu1"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        data-toggle="tab"
+        href="#menu2"
+      >
+        Create User
+      </a>
+    </li>
+    <li>
+      <a
+        data-toggle="tab"
+        href="#menu3"
+      >
+        Authenticate User
+      </a>
+    </li>
+    <li>
+      <a
+        data-toggle="tab"
+        href="#menu4"
+      >
+        Sentiment
+      </a>
+    </li>
+  </ul>
+  <div
+    className="tab-content"
+  >
+    <div
+      className="tab-pane fade in active"
+      id="menu1"
+    >
+      <h3>
+        Home
+      </h3>
+      <p>
+        The Create User tab is used to create a new User.
+      </p>
+      <p>
+        The Authenticate User tab is used to generate the Auth token.
+      </p>
+      <p>
+        The Sentiment tab is used to retrieve a "sentiment" of good, bad, or neutral as well as a confidence score.
+      </p>
+      <p>
+        Server documentation can be found 
+        <a
+          href="https://authenticate-demo.herokuapp.com/module-Server.html"
+        >
+          here
+        </a>
+        . 
+      </p>
+    </div>
+    <div
+      className="tab-pane fade"
+      id="menu2"
+    >
+      <h3>
+        Create User
+      </h3>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-3"
+        />
+        <div
+          className="col-md-3"
+        >
+          <form
+            onSubmit={[Function]}
+          >
+            <div>
+              <label>
+                Username:
+              </label>
+              <br />
+              <input
+                onChange={[Function]}
+                type="text"
+                value={undefined}
+              />
+              <br />
+            </div>
+            <div>
+              <label>
+                Password:
+              </label>
+              <br />
+              <input
+                onChange={[Function]}
+                type="password"
+                value={undefined}
+              />
+              <br />
+            </div>
+            <br />
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          className="col-md-3"
+        />
+      </div>
+    </div>
+    <div
+      className="tab-pane fade"
+      id="menu3"
+    >
+      <h3>
+        Authenticate User
+      </h3>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-3"
+        />
+        <div
+          className="col-md-3"
+        >
+          <form
+            onSubmit={[Function]}
+          >
+            <div>
+              <label>
+                Username:
+              </label>
+              <br />
+              <input
+                onChange={[Function]}
+                type="text"
+                value={undefined}
+              />
+              <br />
+            </div>
+            <div>
+              <label>
+                Password:
+              </label>
+              <br />
+              <input
+                onChange={[Function]}
+                type="password"
+                value={undefined}
+              />
+              <br />
+            </div>
+            <br />
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          className="col-md-3"
+        />
+      </div>
+    </div>
+    <div
+      className="tab-pane fade"
+      id="menu4"
+    >
+      <h3>
+        Sentiment
+      </h3>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-3"
+        />
+        <div
+          className="col-md-3"
+        >
+          <form
+            onSubmit={[Function]}
+          >
+            <label>
+              Auth Token:
+            </label>
+            <br />
+            <textarea
+              cols="50"
+              name="token"
+              onChange={[Function]}
+              rows="4"
+              value=""
+            />
+            <br />
+            <label>
+              Sentence:
+            </label>
+            <br />
+            <textarea
+              cols="50"
+              name="sentence"
+              onChange={[Function]}
+              rows="4"
+              value=""
+            />
+            <br />
+            <button
+              type="submit"
+            >
+              Get Sentiment
+            </button>
+          </form>
+        </div>
+        <div
+          className="col-md-3"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

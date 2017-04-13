@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form renders 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-md-3"
+  />
+  <div
+    className="col-md-3"
+  >
+    <form
+      onSubmit={undefined}
+    >
+      <div>
+        <label>
+          Username:
+        </label>
+        <br />
+        <input
+          onChange={undefined}
+          type="text"
+          value={undefined}
+        />
+        <br />
+      </div>
+      <div>
+        <label>
+          Password:
+        </label>
+        <br />
+        <input
+          onChange={undefined}
+          type="password"
+          value={undefined}
+        />
+        <br />
+      </div>
+      <br />
+      <button
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+  <div
+    className="col-md-3"
+  />
+</div>
+`;

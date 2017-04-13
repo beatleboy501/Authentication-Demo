@@ -56,11 +56,11 @@ export default class Sentiment extends Component {
             <form onSubmit={this.handleClick}>
               <label>Auth Token:</label>
               <br/>
-              <textarea rows="4" cols="50" onChange={this.onTokenChange} value={this.state.token}></textarea>
+              <textarea name="token" rows="4" cols="50" onChange={this.onTokenChange} value={this.state.token}></textarea>
               <br/>
               <label>Sentence:</label>
               <br/>
-              <textarea rows="4" cols="50" onChange={this.onSentenceChange} value={this.state.sentence}></textarea>
+              <textarea name="sentence" rows="4" cols="50" onChange={this.onSentenceChange} value={this.state.sentence}></textarea>
               <br/>
               <button type="submit">Get Sentiment</button>
             </form>
