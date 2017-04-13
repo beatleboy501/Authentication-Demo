@@ -44,7 +44,7 @@ export default class Main extends Component {
       alert('Validation Failure');
       return;
     }
-    let url = isCreate ? "https://authenticate-demo.herokuapp.com/api/create" : "https://authenticate-demo.herokuapp.com/api/authenticate";
+    let url = isCreate ? "https://beatleboy501-authenticate-demo.herokuapp.com/api/create" : "https://beatleboy501-authenticate-demo.herokuapp.com/api/authenticate";
     $.ajax({
           type: 'POST',
           url: url,
@@ -109,7 +109,7 @@ export default class Main extends Component {
               <p>The Create User tab is used to create a new User.</p>
               <p>The Authenticate User tab is used to generate the Auth token.</p>
               <p>The Sentiment tab is used to retrieve a "sentiment" of good, bad, or neutral as well as a confidence score.</p>
-              <p>Server documentation can be found <a href="https://authenticate-demo.herokuapp.com/module-Server.html">here</a>. </p>
+              <p>Server documentation can be found <a href="https://beatleboy501-authenticate-demo.herokuapp.com/module-Server.html">here</a>. </p>
             </div>
             <div id="menu2" className="tab-pane fade">
               <h3>Create User</h3>
