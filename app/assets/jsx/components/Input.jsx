@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 const propTypes = {
-  type: React.PropTypes.string
+  type: React.PropTypes.string,
+  valChange: React.PropTypes.func,
+  val: React.PropTypes.string
 };
 
 export default class Input extends Component {

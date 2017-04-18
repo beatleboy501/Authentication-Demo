@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Input from './Input.jsx';
-const $ = require('jquery');
+import axios from 'axios';
+
+const propTypes = {
+  apiRoot: React.PropTypes.string
+};
 
 export default class Sentiment extends Component {
   constructor(props) {
@@ -35,16 +39,12 @@ export default class Sentiment extends Component {
       txt: this.state.sentence,
       token: this.state.token
     };
-    $.ajax({
-          type: 'POST',
-          url: "https://beatleboy501-authenticate-demo.herokuapp.com/api/sentiment",
-          data: data
+    axios.post(`${this.props.apiRoot}/sentiment`, data)
+        .then(data => {
+          alert("Confidence: " + data.data.confidence + "\nSentiment: " + data.data.sentiment);
         })
-        .done(function (data) {
-          alert("Confidence: " + data.confidence + "\nSentiment: " + data.sentiment);
-        })
-        .fail(function (jqXhr) {
-          alert('Failure: ' + jqXhr.responseJSON.message);
+        .catch(err => {
+          alert(err);
         });
   }
 
@@ -70,3 +70,5 @@ export default class Sentiment extends Component {
     );
   }
 }
+
+Sentiment.PropTypes = propTypes;

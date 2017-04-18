@@ -64,7 +64,7 @@ exports[`Main renders 1`] = `
       <p>
         Server documentation can be found 
         <a
-          href="https://authenticate-demo.herokuapp.com/module-Server.html"
+          href="http://localhost:8080/module-Server.html"
         >
           here
         </a>

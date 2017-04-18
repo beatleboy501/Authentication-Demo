@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Form from './Form.jsx';
 import Sentiment from './Sentiment.jsx';
-
-const $ = require('jquery');
+import axios from 'axios';
 
 export default class Main extends Component {
   constructor(props) {
     super(props);
     this.validate = this.validate.bind(this);
+    this.apiRoot = "http://localhost:8080/api";
     this.state = {
       newUsername: "",
       newPassword: "",
@@ -17,7 +17,6 @@ export default class Main extends Component {
     }
   }
 
-  // TODO: add more validation or use lib
   validate(data) {
     if (!data.username || 0 === data.username.length) {
       return false;
@@ -32,6 +31,7 @@ export default class Main extends Component {
     let self;
     e.preventDefault();
     self = this;
+
     let data = isCreate ? {
       username: this.state.newUsername,
       password: this.state.newPassword,
@@ -40,26 +40,24 @@ export default class Main extends Component {
       username: this.state.authUsername,
       password: this.state.authPassword
     };
+
     if (!this.validate(data)) {
       alert('Validation Failure');
       return;
     }
-    let url = isCreate ? "https://beatleboy501-authenticate-demo.herokuapp.com/api/create" : "https://beatleboy501-authenticate-demo.herokuapp.com/api/authenticate";
-    $.ajax({
-          type: 'POST',
-          url: url,
-          data: data
-        })
-        .done(function (data) {
+    let url = isCreate ? `${this.apiRoot}/create` : `${this.apiRoot}/authenticate`;
+    axios.post(url, data)
+        .then(data => {
           if (isCreate) {
             alert('User saved successfully');
           } else {
-            alert(data.message + "\n" + data.token);
+            alert(data.data.message + "\n" + data.data.token);
           }
         })
-        .fail(function (jqXhr) {
-          alert('Failure: ' + jqXhr.responseJSON.message);
+        .catch(err => {
+          alert(err);
         });
+
     this.setState({
       newUsername: "",
       newPassword: "",
@@ -108,8 +106,10 @@ export default class Main extends Component {
               <h3>Home</h3>
               <p>The Create User tab is used to create a new User.</p>
               <p>The Authenticate User tab is used to generate the Auth token.</p>
-              <p>The Sentiment tab is used to retrieve a "sentiment" of good, bad, or neutral as well as a confidence score.</p>
-              <p>Server documentation can be found <a href="https://beatleboy501-authenticate-demo.herokuapp.com/module-Server.html">here</a>. </p>
+              <p>The Sentiment tab is used to retrieve a "sentiment" of good, bad, or neutral as well as a confidence
+                score.</p>
+              <p>Server documentation can be found <a
+                  href="http://localhost:8080/module-Server.html">here</a>. </p>
             </div>
             <div id="menu2" className="tab-pane fade">
               <h3>Create User</h3>
@@ -127,7 +127,7 @@ export default class Main extends Component {
             </div>
             <div id="menu4" className="tab-pane fade">
               <h3>Sentiment</h3>
-              <Sentiment></Sentiment>
+              <Sentiment apiRoot={this.apiRoot}></Sentiment>
             </div>
           </div>
         </div>
