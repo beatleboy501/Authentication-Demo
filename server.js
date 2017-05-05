@@ -151,17 +151,27 @@ apiRoutes.use(function (req, res, next) {
  * @param {Object} res - the response object containing status, message, and success boolean
  */
 apiRoutes.post('/sentiment', function(req, res) {
-  var txt = req.body.txt;
-  unirest.post(config.sentiment_endpoint)
+  var txt = encodeURIComponent(req.body.txt).replace(/%20/g, "+");
+
+  console.log(config.sentiment_endpoint + txt);
+
+  unirest.post(config.sentiment_endpoint + txt)
       .header("X-Mashape-Key", config.sentiment_key)
       .header("Content-Type", "application/x-www-form-urlencoded")
       .header("Accept", "application/json")
       .send("txt=" + txt)
       .end(function (result) {
+        console.log(result.body);
+        let score;
+        if(result.body.docSentiment.score){
+           score = result.body.docSentiment.score
+        } else {
+          score = 'Unable to get score from https://alchemy.p.mashape.com'
+        }
         res.json({
           success: true,
-          confidence: result.body.result.confidence,
-          sentiment: result.body.result.sentiment
+          confidence: score,
+          sentiment: result.body.docSentiment.type
         });
       });
 });
