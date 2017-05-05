@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "jest && mocha server-test.js",
-    "start": "webpack && node server.js"
+    "start": "npm install && webpack && node server.js"
   },
   "repository": {
     "type": "git",
