@@ -151,10 +151,13 @@ apiRoutes.use(function (req, res, next) {
  * @param {Object} res - the response object containing status, message, and success boolean
  */
 apiRoutes.post('/sentiment', function(req, res) {
+  if(!req.body.txt){
+    return {
+      success: false
+    };
+  }
   var txt = encodeURIComponent(req.body.txt).replace(/%20/g, "+");
-
   console.log(config.sentiment_endpoint + txt);
-
   unirest.post(config.sentiment_endpoint + txt)
       .header("X-Mashape-Key", config.sentiment_key)
       .header("Content-Type", "application/x-www-form-urlencoded")

@@ -7,7 +7,8 @@ const propTypes = {
   onInputChange: React.PropTypes.func,
   onPasswordChange: React.PropTypes.func,
   username: React.PropTypes.String,
-  password: React.PropTypes.String
+  password: React.PropTypes.String,
+  optionalTitle: React.PropTypes.String
 };
 
 export default class Form extends Component {
@@ -18,7 +19,7 @@ export default class Form extends Component {
   render() {
     return (
         <div className="row">
-          <div className="col-md-3"></div>
+          <div className="col-md-3"><h4>{this.props.optionalTitle}</h4></div>
           <div className="col-md-3">
             <form onSubmit={this.props.onSubmit}>
               <Input name="username" type="text" label="Username:" valChange={this.props.onInputChange} val={this.props.newUsername}/>

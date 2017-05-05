@@ -33,5 +33,5 @@ function buildConfig(env) {
   }
 }
 
-var env = process.env.NODE_ENV;
+var env = JSON.stringify('production');//process.env.NODE_ENV;
 module.exports = buildConfig(env);
