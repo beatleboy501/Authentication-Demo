@@ -8,7 +8,7 @@ export default class Main extends Component {
   constructor(props) {
     super(props);
     this.validate = this.validate.bind(this);
-    this.apiRoot = "https://beatleboy501-authenticate-demo.herokuapp.com//api";
+    this.apiRoot = "https://beatleboy501-authenticate-demo.herokuapp.com/api";
     this.state = {
       newUsername: "",
       newPassword: "",
