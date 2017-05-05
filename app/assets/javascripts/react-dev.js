@@ -10332,7 +10332,7 @@ var Main = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
 
     _this.validate = _this.validate.bind(_this);
-    _this.apiRoot = "http://localhost:8080/api";
+    _this.apiRoot = "https://beatleboy501-authenticate-demo.herokuapp.com/api";
     _this.state = {
       newUsername: "",
       newPassword: "",
@@ -10341,8 +10341,6 @@ var Main = function (_Component) {
     };
     return _this;
   }
-
-  //"https://beatleboy501-authenticate-demo.herokuapp.com/api";
 
   _createClass(Main, [{
     key: 'validate',
