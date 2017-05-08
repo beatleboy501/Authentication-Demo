@@ -80,8 +80,9 @@ export default class Sentiment extends Component {
       username: this.state.username,
       password: this.state.password
     };
-    if (!this.props.validation(data)) {
-      alert('Validation Failure');
+    const validationObject = this.props.validation(data);
+    if (!validationObject.isValid) {
+      alert(`Please Check the Following Entries:\n${ validationObject.invalidEntries }`);
       return;
     }
     let url = `${this.props.apiRoot}/authenticate`;
@@ -99,7 +100,7 @@ export default class Sentiment extends Component {
             username: "",
             password: ""
           });
-          alert(err);
+          alert(err.data.message);
         });
     e.target.reset();
   }

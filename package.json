@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "jest && mocha server-test.js",
-    "start": "npm install && webpack && node server.js"
+    "start": "webpack && node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/TRNLLC/node.js-demo#readme",
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "0.12",
     "babel": "^6.23.0",
     "babel-core": "^6.24.0",
     "babel-jest": "^19.0.0",

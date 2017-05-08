@@ -70,7 +70,7 @@ apiRoutes.post('/authenticate', function (req, res) {
       res.status(400).send({success: false, message: 'Authentication failed. User not found.'});
     } else if (user) {
       if (user.password != req.body.password) {
-        res.json({success: false, message: 'Authentication failed. Wrong password.'});
+        res.status(400).json({success: false, message: 'Authentication failed. Wrong password.'});
       } else {
         var token = jwt.sign(user, app.get('superSecret'), {
           expiresIn: 1440 // expires in 24 hours
@@ -89,7 +89,7 @@ apiRoutes.post('/authenticate', function (req, res) {
  * @name <b> /create </b> - The create route will create a user with the username/password entered and save to the database.
  * apiRoutes.post
  * @function
- * @param {Object} req - the request which includes a JSON body with username/password as well as an 'admin' boolean (if not admin, will not be able to generate a token)
+ * @param {Object} req - the request which includes a JSON body with username/password
  * @param {Object} res - the response object containing status, message, and success boolean
  */
 apiRoutes.post('/create', function (req, res) {
@@ -102,8 +102,7 @@ apiRoutes.post('/create', function (req, res) {
     } else if (!user) {
       var newUser = new User({
         username: req.body.username,
-        password: req.body.password,
-        admin: true
+        password: req.body.password
       });
       newUser.save(function (err) {
         if (err) throw err;

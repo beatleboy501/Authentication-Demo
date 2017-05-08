@@ -20,26 +20,31 @@ export default class Main extends Component {
 
   validate(data) {
     let isValid = true;
-    Object.keys(data).forEach(function (key) {
+    let invalidEntries = [];
+    Object.keys(data).forEach((key) => {
       let value = data[key];
       if (0 === value.length || !value) {
         isValid = false;
+        invalidEntries.push(key.charAt(0).toUpperCase() + key.slice(1));
       }
     });
-    return isValid;
+    return {
+      isValid: isValid,
+      invalidEntries: invalidEntries
+    };
   }
 
   handleSubmit(e) {
     let self;
     e.preventDefault();
     self = this;
-    let data = {
+    const data = {
       username: this.state.username,
-      password: this.state.password,
-      admin: true
+      password: this.state.password
     };
-    if (!this.validate(data)) {
-      alert('Validation Failure');
+    const validationObject = this.validate(data);
+    if (!validationObject.isValid) {
+      alert(`Please Check the Following Entries:\n${ validationObject.invalidEntries }`);
       return;
     }
     let url = `${this.apiRoot}/create`;
@@ -53,7 +58,7 @@ export default class Main extends Component {
           alert('User saved successfully');
         })
         .catch(err => {
-          alert(err);
+          alert(err.data.message);
         });
   }
 
